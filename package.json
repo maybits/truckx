@@ -1,0 +1,29 @@
+{
+  "name": "truckx",
+  "version": "1.0.0",
+  "description": "backend app for handling requests from eld/admin panel",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maybits/truckx.git"
+  },
+  "author": "mayank",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maybits/truckx/issues"
+  },
+  "homepage": "https://github.com/maybits/truckx#readme",
+  "dependencies": {
+    "bluebird": "3.5.1",
+    "sequelize": "4.38.0",
+    "mysql2": "1.5.3",
+    "uuid": "2.0.3",
+    "bunyan": "^1.8.14",
+    "express": "4.16.3",
+    "lodash": "^4.17.20",
+    "moment": "2.22.2"
+  }
+}
