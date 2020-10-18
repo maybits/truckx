@@ -21,7 +21,7 @@ DashcamService.setLoginInfo = function(imei){
 
 DashcamService.setAlarmInfo = function(alarm_info){
   var alarm = {
-    imei            : _.get(alarm_info, 'imei'),
+    imei_id         : _.get(alarm_info, 'imei'),
     type            : _.get(alarm_info, 'alarm_type'),
     trigger_datetime: _.get(alarm_info, 'alarm_time'),
     lat             : _.get(alarm_info, 'latitude'),
@@ -39,7 +39,7 @@ DashcamService.setAlarmInfo = function(alarm_info){
 
 DashcamService.setLocationInfo = function(location_info){
   var location = {
-    imei    : _.get(location_info, 'imei'),
+    imei_id : _.get(location_info, 'imei'),
     datetime: _.get(location_info, 'location_time'),
     lat     : _.get(location_info, 'latitude'),
     lng     : _.get(location_info, 'longitude')

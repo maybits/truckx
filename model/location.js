@@ -12,7 +12,7 @@ var attributes = {
     primaryKey   : true,
     autoIncrement: true
   },
-  imei: {
+  imei_id: {
     type     : Sequelize.INTEGER,
     allowNull: false
   },
@@ -34,7 +34,7 @@ var options = {
   tableName: 'location',
   indexes  : [
     {
-      fields: [ 'imei' ]
+      fields: [ 'imei_id' ]
     },
     {
       fields: [ 'datetime' ],
@@ -53,9 +53,8 @@ module.exports = Location;
 ///////////////////////////RELATIONSHIPS///////////////////////
 
 var Dashcam = require('./dashcam');
-var Alarm = require('./alarm');
 
-Location.belongsTo(Dashcam, {'foriegn_key': 'imei'});
+Location.belongsTo(Dashcam, {'foreign_key': 'imei_id', targetKey: 'imei', as: 'locations'});
 
 
 
